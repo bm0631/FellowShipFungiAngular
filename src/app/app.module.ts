@@ -14,6 +14,7 @@ import { TestService } from './services/Test.service';
 import { TestComponent } from './Sites/test/test.component';
 import { EditTestComponent } from './Sites/test/edit/EditTest.component';
 import { UsersComponent } from './Sites/users/Users.component';
+import { RecognitionTreeComponent } from './Sites/recognition-tree/Recognition-tree.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'test', component: TestComponent },
   { path: 'edit-test', component: EditTestComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'tree', component: RecognitionTreeComponent },
 ];
 
 @NgModule({
