@@ -1,0 +1,31 @@
+<h2>Test Colleción de preguntas:</h2>
+<table class="question-table">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Id</th>
+      <th>Texto</th>
+      <th>Respuestas</th>
+      <th [colSpan]="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of testEntities">
+      <td><img [src]="question.getImgUrl()" alt="Test Imagen"></td>
+      <td>
+        {{ question.id }}
+      </td>
+      <td>{{ question.getText() }}</td>
+      <table class="answers-table">
+        <tbody>
+          <tr *ngFor="let answer of question.getAnswers()" [ngClass]="{'correct': answer.isTrue(), 'incorrect': !answer.isTrue()}">
+            <td>{{ answer.getText() }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <td>  <button (click)="editQuestion(question.id, question.getText(), question.getImgUrl(),question.getAnswers())">Editar</button></td>
+      <td>  <button class="incorrect" (click)="deleteQuestion(question.id)">Borrar</button></td>
+    
+    </tr>
+  </tbody>
+</table>

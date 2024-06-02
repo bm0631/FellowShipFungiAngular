@@ -1,0 +1,47 @@
+.question-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .question-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .question-table img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  .question-table button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .question-table button:hover {
+    background-color: #45a049;
+  }
+  
+  .question-table tr:hover {
+    background-color: #f2f2f2; 
+  }
+  
+  .question-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  .correct {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
