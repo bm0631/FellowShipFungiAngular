@@ -1,0 +1,22 @@
+<div class="edit-curiosity-container">
+  <h2>Editando Curiosidad</h2>
+  <div class="form-group">
+    <label>ID:</label>
+    <input type="text" [(ngModel)]="id" disabled>
+  </div>
+  <div class="form-group">
+    <label>Texto:</label>
+    <textarea [(ngModel)]="text"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Imagen Actual:</label>
+    <img [src]="img" alt="Imagen Actual">
+  </div>
+  <div class="form-group">
+    <label>Nueva Imagen:</label>
+    <input type="file" (change)="onFileSelected($event)">
+  </div>
+  <div class="button-group">
+    <button (click)="guardarCambios()">Guardar</button>
+  </div>
+</div>

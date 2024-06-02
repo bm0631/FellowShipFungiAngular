@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { RecognitionService } from "src/app/services/recognition.service";
+import { CuriosityEntity } from "src/app/models/CuriosityEntity";
+import { CuriositiesService } from "src/app/services/Curiosities.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-Curiosities",
@@ -8,8 +10,9 @@ import { RecognitionService } from "src/app/services/recognition.service";
 })
 
 export class CuriositiesComponent implements OnInit {
-  documentData: any; 
-  constructor(private recognitionService: RecognitionService) { 
+  curiosities: CuriosityEntity[] = []; 
+
+  constructor(private router: Router,private curiositiesService: CuriositiesService) { 
 
   }
 
@@ -18,10 +21,20 @@ export class CuriositiesComponent implements OnInit {
   }
   async getDocumentData() {
     try {
-      this.documentData = await this.recognitionService.getDocument();
-      console.log('Datos del documento:', this.documentData.length);
+      this.curiosities = await this.curiositiesService.getCuriosities();
+      this.curiosities.sort((a, b) => a.id.localeCompare(b.id));
     } catch (error) {
       console.error('Error al obtener los datos del documento:', error);
     }
   }
+  editCuriosity(id: string, text: string, img: string) {
+  
+    this.router.navigate(['/edit-curiosity'], { queryParams: { id, text, img } });
+  }
+
+  getDaysEnding(id: string): string {
+
+    return id.substring(id.lastIndexOf("0")+1,id.length);
+  }
+  
 }

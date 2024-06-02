@@ -1,5 +1,23 @@
-<div>
-    <h2>Datos del documento:</h2>
-    <pre>{{ documentData | json }}</pre>
-  </div>
-  
+<h2>Curiosidades:</h2>
+<table class="curiosities-table">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Id</th>
+      <th>Texto</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curiosity of curiosities">
+      <td><img [src]="curiosity.getImgUrl()" alt="Curiosidad Imagen"></td>
+      <td>
+        {{ curiosity.id }}: Se mostrará los días {{ getDaysEnding(curiosity.id) }} de cada mes
+       
+      </td>
+      <td>{{ curiosity.getText() }}</td>
+      <td>  <button (click)="editCuriosity(curiosity.id, curiosity.getText(), curiosity.getImgUrl())">Editar</button></td>
+    
+    </tr>
+  </tbody>
+</table>
