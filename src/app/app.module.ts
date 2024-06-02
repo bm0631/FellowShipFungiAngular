@@ -12,17 +12,19 @@ import { HomeComponent } from './Sites/home/Home.component';
 import { EditarCuriosityComponent } from './Sites/curiosities/edit/EditCuriosity.component';
 import { TestService } from './services/Test.service';
 import { TestComponent } from './Sites/test/test.component';
+import { EditTestComponent } from './Sites/test/edit/EditTest.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'curiosities', component: CuriositiesComponent },
   { path: 'edit-curiosity', component: EditarCuriosityComponent },
   { path: 'test', component: TestComponent },
+  { path: 'edit-test', component: EditTestComponent },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,CuriositiesComponent,EditarCuriosityComponent,TestComponent
+    AppComponent,HomeComponent,CuriositiesComponent,EditarCuriosityComponent,TestComponent,EditTestComponent
   ],
   imports: [RouterModule.forRoot(routes),
     BrowserModule, provideFirestore(() => getFirestore()),

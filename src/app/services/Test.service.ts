@@ -38,7 +38,7 @@ export class TestService {
 
     return testEntities;
   }
-  editQuestion(id:string, datos:any){
+  editTest(id:string, datos:any){
     alert("TODO")
   }
 }

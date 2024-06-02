@@ -30,4 +30,5 @@ export class TestEntity extends ImgStorageEntity {
     getFolder(): string {
         return TestEntity.folder;
     }
+    
 }

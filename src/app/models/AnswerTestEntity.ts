@@ -10,6 +10,9 @@ export class AnswerTestEntity {
     getText(): string {
         return this.text;
     }
+    setText(text: string) {
+        this.text = text;
+      }
 
     isTrue(): boolean {
         return this.answerIsTrue;
