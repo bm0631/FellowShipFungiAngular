@@ -13,6 +13,7 @@ import { EditarCuriosityComponent } from './Sites/curiosities/edit/EditCuriosity
 import { TestService } from './services/Test.service';
 import { TestComponent } from './Sites/test/test.component';
 import { EditTestComponent } from './Sites/test/edit/EditTest.component';
+import { UsersComponent } from './Sites/users/Users.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,11 +21,12 @@ const routes: Routes = [
   { path: 'edit-curiosity', component: EditarCuriosityComponent },
   { path: 'test', component: TestComponent },
   { path: 'edit-test', component: EditTestComponent },
+  { path: 'users', component: UsersComponent },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,CuriositiesComponent,EditarCuriosityComponent,TestComponent,EditTestComponent
+    AppComponent,HomeComponent,CuriositiesComponent,EditarCuriosityComponent,TestComponent,EditTestComponent,UsersComponent
   ],
   imports: [RouterModule.forRoot(routes),
     BrowserModule, provideFirestore(() => getFirestore()),
