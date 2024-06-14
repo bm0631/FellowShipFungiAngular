@@ -1,27 +1,62 @@
 # FellowshipFungiAdminWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+Este proyecto es una prueba de concepto que facilita la administración de la aplicación FellowshipFungi a personas ajenas, mediante una interfaz web desarrollada en Angular. Las funciones incluidas en esta prueba de concepto son:
 
-## Development server
+- Leer  curiosidades diarias.
+- Lector de preguntas del test.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos Previos
 
-## Code scaffolding
+- Node.js y npm instalados.
+- Cuenta de Firebase.
+- Angular CLI instalado.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+1. Clonar el repositorio:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```bash
+    git clone https://github.com/bm0631/FellowShipFungiAngular
+    ```
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Instalar las dependencias:
 
-## Running end-to-end tests
+    ```bash
+    npm install
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Configurar Firebase en tu proyecto de Angular:
 
-## Further help
+    - Crear un nuevo proyecto en Firebase Console.
+    - Registrar la aplicación web en Firebase.
+    - Descargar el archivo `firebase-config.js` y colocarlo en el directorio `src/environments` de tu proyecto.
+    - Activar los servicios de Firestore Database, Authentication y Storage en Firebase.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Ejecutar la aplicación:
+
+    ```bash
+    ng serve
+    ```
+
+5. Abrir el navegador y navegar a `http://localhost:4200`.
+
+
+## Dependencias
+
+Las siguientes dependencias de Angular se utilizan en este proyecto:
+
+- `@angular-devkit/architect`: 0.1602.14
+- `@angular-devkit/build-angular`: 16.2.14
+- `@angular-devkit/core`: 16.2.14
+- `@angular-devkit/schematics`: 16.2.14
+- `@angular/cli`: 16.2.14
+- `@angular/fire`: 16.0.0
+- `@schematics/angular`: 16.2.14
+- `rxjs`: 7.8.1
+- `typescript`: 5.1.6
+- `zone.js`: 0.13.3
+
+## Desarrollo Futuro
+
+Aunque esta prueba de concepto solo implementa completamente las funciones de gestión de preguntas del test y de curiosidades diarias, las demás funciones están maquetadas y pueden ser implementadas en futuros desarrollos.
